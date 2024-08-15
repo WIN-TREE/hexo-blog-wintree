@@ -1,0 +1,22 @@
+- class_name: 1.网站支持
+  class_desc: 本网站的搭建由以下开源作者/服务商提供技术/运行支持
+  link_list: 
+    - name: Hexo 
+      link: https://hexo.io/zh-cn/
+      avatar: https://hexo.io/favicon.ico
+      descr: 快速、简单且强大的博客框架
+    - name: Vercel
+      link: https://vercel.com/
+      avatar: https://vercel.com/favicon.ico
+      descr: 免费部署Node.js的良心服务商（
+- class_name: 2.网站教程以及部分功能作者
+  class_desc: 魔改Butterfly是真的难，不过有这些：
+  link_list: 
+    - name: Fomalhaut🥝 
+      link: https://www.fomal.cc/
+      avatar: https://www.fomal.cc/favicon.ico
+      descr: 整理的挺到位
+    - name: Akilarの糖果屋
+      link: https://akilar.top/
+      avatar: https://npm.elemecdn.com/akiblog@1.0.2/img/titleday.png
+      descr: 大佬nb
