@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://win-tree.cn/
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -120,3 +120,63 @@ live2d:
     height: 300
   mobile:
     show: false
+
+# footer_beautify
+# 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
+# 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
+footer_beautify:
+  enable:
+    timer: true # 计时器开关
+    bdage: true # 徽标开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude: #屏蔽页面
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: id
+    name: footer-wrap
+    index: 0
+  runtime_js: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/js/runtime.min.js
+  runtime_css: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/css/runtime.css
+  swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
+  bdageitem:
+    - link: https://hexo.io/zh-cn/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Hexo.svg
+      message: 本站使用Hexo博客框架
+    - link: https://butterfly.js.org/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Butterfly.svg
+      message: 本站使用Butterfly主题
+    - link: https://vercel.com/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Vercel.svg
+      message: 本站网站托管于Vercel
+    - link: https://cloudflare.com/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Cloudflare.svg
+      message: 本站CDN采用Cloudflare
+    - link: https://jsdelivr.com/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/jsDelivr.svg
+      message: 本站CDN采用jsDelivr
+    - link: https://github.com/WIN-TREE/hexo-blog-wintree/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Github.svg
+      message: 本站代码托管于Github
+    - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/BY-NC-SA.svg
+      message: 本站采用BY-NC-SA 4.0国际许可协议进行许可
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
+
+## abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32 进制
+  rep: hex        #support dec(default) and hex  算法
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+  ## Generate categories from directory-tree
+  ## depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true  #true(default)
+     depth:        #3(default)
+     over_write: false 
+  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_date: false #enable auto date, it can auto fill the date by time today
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
