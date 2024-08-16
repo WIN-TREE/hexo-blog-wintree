@@ -604,14 +604,14 @@ beautify:
 font:
   global-font-size: '15px'
   code-font-size: '14px'
-  font-family: LXGWWK
-  code-font-family: Consolas
+  font-family: LXGWWK, 'Microsoft Yahei'
+  code-font-family: Consolas, sans-serif
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link:
-  font-family: DeYiHei
+  font-family: SmileHei, 'Microsoft Yahei'
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -878,7 +878,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="/source/css/custom.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/css/custom.min.css">
   bottom:
     # - <script src="xxxx"></script>
 
