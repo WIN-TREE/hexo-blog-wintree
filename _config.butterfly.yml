@@ -12,6 +12,7 @@ menu:
   #   Movie: /movies/ || fas fa-video
   友情链接: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
+  随机访问: javascript:randomPost(); || fa-solid fa-shuffle
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -87,17 +88,17 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://bing.img.run/uhd.php
+index_img: transparent
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://bing.img.run/rand_uhd.php
 
 # The banner image of archive page
-archive_img:
+archive_img: transparent
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img:
+tag_img: transparent
 
 # The banner image of tag page
 # format:
@@ -106,7 +107,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img:
+category_img: /img/background3.png
 
 # The banner image of category page
 # format:
@@ -133,8 +134,8 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
+  enable: true
+  subtitle: '啊欧，网页好像离家出走了......'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -519,10 +520,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: url(https://bing.img.run/1920x1080.php)
 
 # Footer Background
-footer_bg: false
+footer_bg: transparent
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -594,17 +595,17 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: false
+  enable: true
   field: post # site/post
-  title-prefix-icon: # '\f0c1'
-  title-prefix-icon-color: # '#F47466'
+  title-prefix-icon: '\f863'
+  title-prefix-icon-color: "#F47466"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
   global-font-size: '15px'
   code-font-size: '14px'
-  font-family: LXGWWK, 'Microsoft Yahei'
+  font-family: 'Microsoft Yahei'
   code-font-family: Consolas, sans-serif
 
 # Font settings for the site title and site subtitle
@@ -642,13 +643,14 @@ subtitle:
 
 # Loading Animation (加載動畫)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: /css/progress_bar.css
+  avatar: /img/avatar.webp
 
 # aside (側邊欄)
 # --------------------------------------
@@ -878,9 +880,29 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/css/custom.min.css">
+    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/cursor.css">
+    - <link rel="stylesheet" href="/css/progress_bar.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/readPercent.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@latest/packages/theme-chalk/lib/index.min.css">
+    - <span id="fps"></span> # 帧率检测
+    - "<style>#article-container.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { -webkit-animation: avatar_turn_around 1s linear infinite; -moz-animation: avatar_turn_around 1s linear infinite; -o-animation: avatar_turn_around 1s linear infinite; -ms-animation: avatar_turn_around 1s linear infinite; animation: avatar_turn_around 1s linear infinite; }</style>"
+    - <link rel="stylesheet" href="/css/modify.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <script async src="/js/event.js"></script>
+    - <script defer src="/js/cursor.js"></script>
+    - <script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script>
+    - <script defer data-pjax src="/js/readPercent.js"></script>
+    - <script async src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
+    - <script async src="https://cdn.jsdelivr.net/npm/element-ui@2.15.14/lib/index.js"></script>
+    - <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
+    - <script defer src="/js/lunar.js"></script> # 农历计算
+    - <script defer src="/js/day.js"></script> # 节日弹窗
+    - <script src="/js/sun_moon.js" async></script>
+    - <script async src="/js/fps.js"></script> # 帧率检测
+    - <script src="/js/modify.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

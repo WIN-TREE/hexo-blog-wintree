@@ -4,7 +4,7 @@
 
 # Site
 title: WINDOWS-TREE的博客
-subtitle: ''
+subtitle: 'WIN-TREE.CN'
 description: ''
 keywords: blog,hexo,win-tree
 author: WINDOWS-TREE
@@ -200,3 +200,20 @@ wowjs:
   animate_css: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css
   wow_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js
   wow_init_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js
+
+# hexo-butterfly-categories-card
+# see https://akilar.top/posts/a9131002/
+categoryBar:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  layout: # 挂载容器类型
+    type: id
+    name: recent-posts
+    index: 0
+  column: odd # odd：3列 | even：4列
+  row: 4 #显示行数，默认两行，超过行数切换为滚动显示
+  message:
+    - descr: 博客魔改记录
+      cover: https://cn.bing.com/th?id=OHR.SleepingFox_ZH-CN2622967726_1920x1080.jpg
+  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
