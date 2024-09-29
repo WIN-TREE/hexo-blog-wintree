@@ -77,11 +77,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/img/favicon.png
+favicon: https://img.win-tree.cn/img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/img/favicon.png
+  img: https://img.win-tree.cn/img/favicon.png
   effect: false
 
 # Disable all banner image

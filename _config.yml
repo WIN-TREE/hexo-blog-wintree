@@ -137,31 +137,34 @@ footer_beautify:
     type: id
     name: footer-wrap
     index: 0
-  runtime_js: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/js/runtime.min.js
-  runtime_css: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@master/source/css/runtime.css
+  runtime_js: https://img.win-tree.cn/js/runtime.js
+  runtime_css: https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css
   swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数
   bdageitem:
     - link: https://hexo.io/zh-cn/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Hexo.svg
+      shields: https://img.win-tree.cn/img/Hexo.svg
       message: 本站使用Hexo博客框架
     - link: https://butterfly.js.org/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Butterfly.svg
+      shields: https://img.win-tree.cn/img/Butterfly.svg
       message: 本站使用Butterfly主题
     - link: https://vercel.com/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Vercel.svg
+      shields: https://img.win-tree.cn/img/Vercel.svg
       message: 本站网站托管于Vercel
     - link: https://cloudflare.com/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Cloudflare.svg
+      shields: https://img.win-tree.cn/img/Cloudflare.svg
       message: 本站CDN采用Cloudflare
     - link: https://jsdelivr.com/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/jsDelivr.svg
-      message: 本站CDN采用jsDelivr
+      shields: https://img.win-tree.cn/img/jsDelivr.svg
+      message: 本站静态文件CDN采用jsDelivr
     - link: https://github.com/WIN-TREE/hexo-blog-wintree/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/Github.svg
+      shields: https://img.win-tree.cn/img/Github.svg
       message: 本站代码托管于Github
     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      shields: https://cdn.jsdelivr.net/gh/WIN-TREE/hexo-blog-wintree@latest/source/img/BY-NC-SA.svg
+      shields: https://img.win-tree.cn/img/BY-NC-SA.svg
       message: 本站采用BY-NC-SA 4.0国际许可协议进行许可
+    - link: https://icp.gov.moe/?keyword=20244002
+      shields: https://img.win-tree.cn/img/MoeICP.svg
+      message: 萌ICP备案20244002
   swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
   swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
